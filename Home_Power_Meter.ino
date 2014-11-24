@@ -119,7 +119,7 @@ void SensorReading()	//function executed every period UPDATE_TIME
   LCDserial.print(wh);
   LCDserial.print(" wh");
   //Save data in SD Card
-  File dataFile = SD.open("log.txt", FILE_WRITE);
+  File dataFile = SD.open("log.txt", FILE_WRITE);	//data are saved in file "log.txt" in the SD root directory
   if (dataFile) {
     dataFile.print(lwhtime);
       for (int i=0; i < NUM_CURRENT_SENSORS; i++){
